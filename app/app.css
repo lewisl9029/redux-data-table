@@ -1,0 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+
+button:disabled {
+	opacity: 0.5;
+}
