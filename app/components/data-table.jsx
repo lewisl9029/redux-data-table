@@ -28,8 +28,10 @@ let DataTable = ({
 	switchPage,
 	updateFilter
 }) => {
+  //TODO: use reselect's memoized selectors for filtering and pagination
 	let filteredItems = items
-		.filter(item => isPartialMatch(item.get('item'), filterText));
+  //TODO: refactor to allow filtering by all parameters
+		.filter(item => isPartialMatch(item.get('name'), filterText));
 		
 	let beginningIndex = getBeginningIndex(currentPage, itemsPerPage);
 	let endingIndex = getEndingIndex(currentPage, itemsPerPage, filteredItems.size); 
@@ -54,10 +56,10 @@ let DataTable = ({
 			<table className="u-full-width">
 				<colgroup>
 					<col style={({
-						width: '55%'
+						width: '25%'
 					})} />
 					<col style={({
-						width: '15%'
+						width: '45%'
 					})} />
 					<col style={({
 						width: '15%'

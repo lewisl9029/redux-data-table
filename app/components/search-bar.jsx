@@ -6,7 +6,7 @@ let SearchBar = ({ updateFilter }) => (
 			<input 
 				type="text" 
 				className="u-full-width" 
-				placeholder="Search for an item..." 
+				placeholder="Search by name..." 
 				style={({
 					marginBottom: '0.5em'
 				})} 

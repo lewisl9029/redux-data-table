@@ -1,4 +1,5 @@
-import { Map, OrderedMap } from 'immutable';
+import { Range, Map, OrderedMap } from 'immutable';
+import faker from 'faker';
 
 import { 
 	SORT_ITEMS, 
@@ -8,7 +9,15 @@ import {
 } from '../actions/actions';
 
 //TODO: refactor as props on the exported component for external use
-let initialState = OrderedMap({});
+let fakeItems = Range(0, 1000)
+  .map(id => [id, Map({ 
+    id, 
+    name: faker.name.findName(), 
+    job: faker.name.jobTitle(),
+    salary: faker.random.number()
+  })]);
+
+let initialState = OrderedMap(fakeItems);
 
 let items = (state = initialState, action) => {
 	switch (action.type) {

@@ -27,8 +27,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'www'),
-    filename: 'app.js',
-    publicPath: '/'
+    filename: 'app.js'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
