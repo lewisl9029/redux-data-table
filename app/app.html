@@ -11,6 +11,14 @@
     {% } %}
   </head>
   <body>
+    <div id="ribbon-container">
+      <div id="ribbon">
+        <a class="button"
+          href="https://github.com/lewisl9029/redux-data-table" target="_blank">
+          Fork me on GitHub
+        </a>
+      </div>
+    </div>
 		<div id="app"></div>
     {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
     <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>

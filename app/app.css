@@ -3,3 +3,28 @@
 button:disabled {
 	opacity: 0.5;
 }
+
+#ribbon-container {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  height: 190px;
+  width: 190px;
+}
+
+#ribbon {
+  pointer-events: all;
+  z-index: 2;
+  position: relative;
+  right: -30px;
+  top: 30px;
+  white-space: nowrap;
+  transform: rotate(45deg);
+}
+
+#ribbon a {
+  padding: 0 40px;
+}
+
